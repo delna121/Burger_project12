@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% load static %}
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'banner.css' %}">
+<div class="banner">
+    <div class="slider">
+        <img src="{% static '/image/b.jpg' %}" id="slideImg" alt="slide1">
+    </div>
+    <div class="overlay">
+
+    </div>
+</div>
+
+<script>
+    var slideImg = document.getElementById("slideImg");
+    var image =new Array(
+        "{% static '/image/a.jpg' %}",
+        "{% static '/image/c.jpg' %}",
+        "{% static '/image/f.jpg' %}",
+    );
+    var len = image.length;
+    var i = 0;
+    function slider(){
+        if(i > len-1){
+            i = 0;
+        }
+        slideImg.src = image[i];
+        i++;
+        setTimeout('slider()',3000);
+        }
+    
+</script>
+
+
+
+{% endblock %}
+
+
