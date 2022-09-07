@@ -22,27 +22,29 @@
                 {% csrf_token %}
                 <h2 class="form-title">Create account</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="username" id="name" placeholder="Your Name"/>
+                            <input type="text" class="form-input" name="fname" id="name" placeholder="Your first Name"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="first_name" id="name" placeholder="Your first Name"/>
+                            <input type="text" class="form-input" name="lname" id="name" placeholder="Your last Name"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="last_name" id="name" placeholder="Your last Name"/>
+                            <input type="text" class="form-input" name="tel" id="phone" placeholder="Your phone"/>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="phone" id="phone" placeholder="Your phone"/>
-                        </div> 
+                  <div class="form-group">
+                            <input type="text" class="form-input" name="city" id="phone" placeholder="city"/>
+                        </div>
+                  <div class="form-group">
+                            <input type="text" class="form-input" name="district" id="phone" placeholder="state"/>
+                        </div>
+                  <div class="form-group">
+                            <input type="text" class="form-input" name="state" id="phone" placeholder="state"/>
+                        </div>
                         <div class="form-group">
                             <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-input" name="cpassword" id="cpassword" placeholder="Repeat your password"/>
-                            <span toggle="#cpassword" class="zmdi zmdi-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
@@ -52,9 +54,9 @@
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
                         </div>
                     </form>
-                    <p class="loginhere">
-                        Have already an account ? <a href="{% url 'login.html' %}" class="loginhere-link">Login here</a>
-                    </p>
+<!--                    <p class="loginhere">-->
+<!--                        Have already an account ? <a href="{% url 'login' %}" class="loginhere-link">Login here</a>-->
+<!--                    </p>-->
                 </div>
             </div>
         </section>
